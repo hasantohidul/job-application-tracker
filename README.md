@@ -3,6 +3,8 @@
 
 ## Overview
 The Job Application Tracker is a front end web application that helps users manage their job applications efficiently. It is built using modern frontend technologies like React, Redux, Formik, and Yup, with a responsive design provided by Bootstrap. The project also includes unit tests to ensure functionality and reliability. Future plans include integrating a backend to extend its capabilities.
+## Live Demo
+Check out the live demo of the application [here](https://hasantohidul-jobapplicationtracker.netlify.app/).
 ## Features
 
 - Add, edit and delete job applications
@@ -79,3 +81,11 @@ The current implementation is focused on the front-end. Future plans include int
 Contributions are welcome! Please fork this repository and submit a pull request for any features, enhancements, or bug fixes.
 ## License
 This project is licensed under the MIT License
+## Contact
+
+For any questions or suggestions, please contact:
+
+- **Name**: Mohammad Tohidul Hasan
+- **Email**: [mhasantohidul@gmail.com](mailto:mhasantohidul@gmail.com)
+- **GitHub**: [hasantohidul](https://github.com/hasantohidul)
+- **LinkedIn**: [hasantohidul](https://www.linkedin.com/in/hasantohidul/)

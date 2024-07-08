@@ -5,7 +5,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addJob, updateJob } from "../redux/reducers/jobReducer";
 
-// Define CustomTextInput to use a text input in the JobForm
+/**
+ * CustomTextInput component to render an input field with formik
+ *
+ * @param {object} props - The properties passed to the input field
+ * @returns {JSX.Element} The CustomTextInput component
+ */
 const CustomTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
@@ -14,12 +19,19 @@ const CustomTextInput = ({ label, ...props }) => {
         {label}
       </label>
       <input className="form-control" {...field} {...props} />
-      {meta.touched && meta.error ? <div className="text-danger">{meta.error}</div> : null}
+      {meta.touched && meta.error ? (
+        <div className="text-danger">{meta.error}</div>
+      ) : null}
     </div>
   );
 };
 
-// Define CustomSelect to use as a dropdown in the JobForm
+/**
+ * CustomSelect component to render a select field with formik
+ *
+ * @param {object} props - The properties passed to the select field
+ * @returns {JSX.Element} The CustomSelect component
+ */
 const CustomSelect = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
@@ -30,12 +42,19 @@ const CustomSelect = ({ label, ...props }) => {
       <select className="form-control" {...field} {...props}>
         {props.children}
       </select>
-      {meta.touched && meta.error ? <div className="text-danger">{meta.error}</div> : null}
+      {meta.touched && meta.error ? (
+        <div className="text-danger">{meta.error}</div>
+      ) : null}
     </div>
   );
 };
 
-// Define JobForm component
+/**
+ * JobForm component to add or edit a job application
+ *
+ * @param {boolean} isEditing - Indicates if the form is in the editing mode
+ * @returns {JSX.Element} The JobForm component
+ */
 function JobForm({ isEditing }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();

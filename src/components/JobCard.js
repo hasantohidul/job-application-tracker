@@ -15,7 +15,7 @@ function JobCard({ job }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Handle job Deletion
+  // Handles A Job Card Deletion
   const handleDelete = () => {
     dispatch(deleteJob(job.id));
   };

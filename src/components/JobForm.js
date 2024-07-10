@@ -94,10 +94,10 @@ function JobForm({ isEditing }) {
       enableReinitialize={true}
     >
       {(formik) => (
-        <div className="container mt-4">
-          <h1 className="text-center">{isEditing ? "Edit Job" : "Add Job"}</h1>
+        <div className="container">
+          <h1 className="">{isEditing ? "Edit Job" : "Add Job"}</h1>
           <Form>
-            <div className="row justify-content-center">
+            <div className="row">
               <div className="col-10 col-sm-8 col-md-4">
                 <CustomTextInput
                   label="Position"
@@ -109,7 +109,7 @@ function JobForm({ isEditing }) {
               </div>
             </div>
 
-            <div className="row justify-content-center">
+            <div className="row">
               <div className="col-10 col-sm-8 col-md-4">
                 <CustomTextInput
                   label="Company"
@@ -120,7 +120,7 @@ function JobForm({ isEditing }) {
                 />
               </div>
             </div>
-            <div className="row justify-content-center">
+            <div className="row">
               <div className="col-10 col-sm-8 col-md-4">
                 <CustomSelect label="Status" name="status" id="status">
                   <option value="Applied">Applied</option>
@@ -130,7 +130,7 @@ function JobForm({ isEditing }) {
                 </CustomSelect>
               </div>
             </div>
-            <div className="row justify-content-center">
+            <div className="row">
               <div className="col-10 col-sm-8 col-md-4">
                 <button className="btn btn-primary" type="submit">
                   {isEditing ? "Update Job" : "Add Job"}

@@ -98,7 +98,7 @@ function JobForm({ isEditing }) {
           <h1 className="">{isEditing ? "Edit Job" : "Add Job"}</h1>
           <Form>
             <div className="row">
-              <div className="col-10 col-sm-8 col-md-4">
+              <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
                 <CustomTextInput
                   label="Position"
                   name="position"
@@ -110,7 +110,7 @@ function JobForm({ isEditing }) {
             </div>
 
             <div className="row">
-              <div className="col-10 col-sm-8 col-md-4">
+              <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
                 <CustomTextInput
                   label="Company"
                   name="company"
@@ -121,7 +121,7 @@ function JobForm({ isEditing }) {
               </div>
             </div>
             <div className="row">
-              <div className="col-10 col-sm-8 col-md-4">
+              <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
                 <CustomSelect label="Status" name="status" id="status">
                   <option value="Applied">Applied</option>
                   <option value="Interview">Interview</option>
@@ -131,7 +131,7 @@ function JobForm({ isEditing }) {
               </div>
             </div>
             <div className="row">
-              <div className="col-10 col-sm-8 col-md-4">
+              <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
                 <button className="btn btn-primary" type="submit">
                   {isEditing ? "Update Job" : "Add Job"}
                 </button>

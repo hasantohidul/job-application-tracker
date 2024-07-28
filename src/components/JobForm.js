@@ -131,7 +131,7 @@ function JobForm({ isEditing }) {
               </div>
             </div>
             <div className="row">
-              <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+              <div className="mb-4">
                 <button className="btn btn-primary" type="submit">
                   {isEditing ? "Update Job" : "Add Job"}
                 </button>

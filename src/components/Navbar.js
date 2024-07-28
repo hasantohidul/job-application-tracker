@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 // Navbar component for navigation
 function Navbar() {
@@ -31,6 +32,9 @@ function Navbar() {
               <Link className="nav-link" to="/add-job">
                 Add Job
               </Link>
+            </li>
+            <li>
+              <ThemeSwitcher />
             </li>
           </ul>
         </div>

@@ -32,7 +32,7 @@ function JobCard({ job }) {
           <h5 className="card-title">{job.position}</h5>
           <p className="card-text">{job.company}</p>
           <p className="card-text">
-            <small className="text-muted">{job.status}</small>
+            <small>{job.status}</small>
           </p>
           <div className="d-flex justify-content-between">
             <button className="btn btn-primary" onClick={handleEdit}>

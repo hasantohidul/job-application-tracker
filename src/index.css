@@ -7,9 +7,9 @@
 
 /* Define CSS variable for the dardk theme */
 [data-theme="dark"] {
-  --background-color: #444;
+  --background-color: #222;
   --text-color: #fff;
-  --card-background-color: #222;
+  --card-background-color: #444;
   --card-text-color: #fff;
 }
 

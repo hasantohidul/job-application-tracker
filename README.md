@@ -12,6 +12,8 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
 - State management with Redux
 - Responsive design with Bootstrap
 - Comprehensive unit tests with Jest and React Testing Library
+- Data Persistence using localStorage
+- Light/Dark Theme Switcher for enhanced user experience
 
 
 ## Technologies Used
@@ -55,6 +57,7 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
 ## Project Structure
 ```sh
 job-application-tracker/
+job-application-tracker/
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.js
@@ -65,12 +68,18 @@ job-application-tracker/
 │   │   ├── JobForm.test.js
 │   │   ├── Dashboard.js
 │   │   ├── Dashboard.css
+│   │   ├── ThemeSwitcher.js
+│   ├── contexts/
+│   │   ├── ThemeContext.js
 │   ├── redux/
 │   │   ├── store.js
 │   │   ├── reducers/
 │   │   │   ├── jobReducer.js
+│   ├── utils/
+│   │   ├── localStorage.js
 │   ├── App.js
 │   ├── index.js
+│   ├── index.css
 ├── .gitignore
 ├── package.json
 ├── README.md

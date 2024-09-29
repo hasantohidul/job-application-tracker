@@ -14,9 +14,9 @@ function Dashboard() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold mb-6">Dashboard</h1>
-      <div className="flex flex-wrap md:-mx-4 justify-center lg:justify-start">
+      <div className="flex flex-wrap md:-mx-4 justify-center lg:justify-start xl:mx-8">
         {jobs.map((job) => (
-          <div className="w-96 sm:w-64 md:w-64 lg:w-90 xl:w-72 m-2" key={job.id}>
+          <div className="w-96 sm:w-64 md:w-64 lg:w-72 xl:w-64 mx-2 my-3 xl:mx-3 xl:my-4" key={job.id}>
             <JobCard job={job} />
           </div>
         ))}

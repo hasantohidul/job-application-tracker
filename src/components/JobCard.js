@@ -1,51 +1,72 @@
+// import React from "react";
+/* <div className="w-80 sm:w-88 md:w-72 lg:w-80">
+  <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+    <div className="p-6">
+      <h5 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+        {job.position}
+      </h5>
+      <p className="text-gray-600 dark:text-gray-300">{job.company}</p>
+      <p className="text-gray-500 dark:text-gray-400">
+        <small>{job.status}</small>
+      </p>
+      <div className="flex justify-between mt-4">
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={handleEdit}
+        >
+          Edit
+        </button>
+        <button
+          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          onClick={handleDelete}
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div> */
+
+// export default JobCard;
+
+
 import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteJob } from "../redux/reducers/jobReducer";
 import { useNavigate } from "react-router-dom";
-import "./JobCard.css"; // Custom css for styling
 
-/** 
-* JobCard component displays job details and provides edit and delete options
+/**
+ * JobCard component displays job details and provides edit and delete options
+ * 
+ * @param {object} - The job object containing job details
+ * @returns {JSX.Element} 
+ */
 
-*@param {object} job - The job object containing job details
-*@returns {JSX.Element} The JobCard component
-
-*/
-function JobCard({ job }) {
+function JobCard({job}) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Handles A Job Card Deletion
-  const handleDelete = () => {
-    dispatch(deleteJob(job.id));
-  };
+  // Handles a job card deletion
+  const handleDelete = () => dispatch(deleteJob(job.id));
 
-  // Handle job edit
-  const handleEdit = () => {
-    navigate(`/edit-job/${job.id}`);
-  };
+  // Handles job edit
+  const handleEdit = () => navigate(`/edit-job/${job.id}`);
 
   return (
-    <div className="job-card mx-auto">
-      <div className="card mb-4 shadow-sm">
-        <div className="card-body">
-          <h5 className="card-title">{job.position}</h5>
-          <p className="card-text">{job.company}</p>
-          <p className="card-text">
-            <small>{job.status}</small>
-          </p>
-          <div className="d-flex justify-content-between">
-            <button className="btn btn-primary" onClick={handleEdit}>
-              Edit
-            </button>
-            <button className="btn btn-danger" onClick={handleDelete}>
-              Delete
-            </button>
+    <div className="w-80 sm:w-88 md:w-72 lg:w-80">
+      <div className="bg-white dark:bg-gray-800 dark:text-gray-100 shadow-md rounded-lg overflow-hidden">
+        <div className="p-6">
+          <h5 className="text-xl font-semibold text-gray-800 dark:text-gray-100">{job.position}</h5>
+          <p className="text-gray-600 dark:text-gray-300">{job.company}</p>
+          <p className="text-gray-500 dark:text-gray-400"><small>{job.status}</small></p>
+          <div className="flex justify-between mt-4">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleEdit}>Edit</button>
+            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4" onClick={handleDelete}>Delete</button>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default JobCard;

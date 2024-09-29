@@ -53,7 +53,7 @@ function JobCard({job}) {
   const handleEdit = () => navigate(`/edit-job/${job.id}`);
 
   return (
-    <div className="w-80 sm:w-88 md:w-72 lg:w-80">
+    <div className="">
       <div className="bg-white dark:bg-gray-800 dark:text-gray-100 shadow-md rounded-lg overflow-hidden">
         <div className="p-6">
           <h5 className="text-xl font-semibold text-gray-800 dark:text-gray-100">{job.position}</h5>
@@ -61,7 +61,7 @@ function JobCard({job}) {
           <p className="text-gray-500 dark:text-gray-400"><small>{job.status}</small></p>
           <div className="flex justify-between mt-4">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleEdit}>Edit</button>
-            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4" onClick={handleDelete}>Delete</button>
+            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={handleDelete}>Delete</button>
           </div>
         </div>
       </div>

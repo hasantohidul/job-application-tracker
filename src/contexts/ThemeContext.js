@@ -2,9 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext();
 
-const useTheme = () => {
-  return useContext(ThemeContext);
-};
+const useTheme = () => useContext(ThemeContext);
 
 function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(

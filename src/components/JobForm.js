@@ -13,14 +13,24 @@ import { addJob, updateJob } from "../redux/reducers/jobReducer";
  */
 const CustomTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
+  const hasError = meta.touched && meta.error;
   return (
-    <div className="form-group mb-4">
-      <label className="form-label" htmlFor={props.id || props.name}>
+    <div className="mb-4">
+      <label
+        className="block text-lg font-medium text-gray-700 mb-1"
+        htmlFor={props.id || props.name}
+      >
         {label}
       </label>
-      <input className="form-control" {...field} {...props} />
+      <input
+        className={`w-full px-3 py-2 border ${
+          hasError ? "border-red-500" : "border-gray-300"
+        } rounded-md focus:outline-none focus:ring-indigo-500`}
+        {...field}
+        {...props}
+      />
       {meta.touched && meta.error ? (
-        <div className="text-danger">{meta.error}</div>
+        <div className="text-red-500 text-sm mt-1">{meta.error}</div>
       ) : null}
     </div>
   );
@@ -34,16 +44,24 @@ const CustomTextInput = ({ label, ...props }) => {
  */
 const CustomSelect = ({ label, ...props }) => {
   const [field, meta] = useField(props);
+  const hasError = meta.touched && meta.error;
   return (
-    <div className="form-group mb-4">
-      <label className="form-label" htmlFor={props.id || props.name}>
+    <div className="mb-4">
+      <label
+        className="block text-lg font-medium text-gray-700 mb-1"
+        htmlFor={props.id || props.name}
+      >
         {label}
       </label>
-      <select className="form-control" {...field} {...props}>
+      <select
+        className={`w-full px-3 py-2 border ${hasError ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-indigo-500`}
+        {...field}
+        {...props}
+      >
         {props.children}
       </select>
       {meta.touched && meta.error ? (
-        <div className="text-danger">{meta.error}</div>
+        <div className="text-red-500 text-sm mt-1">{meta.error}</div>
       ) : null}
     </div>
   );
@@ -94,48 +112,41 @@ function JobForm({ isEditing }) {
       enableReinitialize={true}
     >
       {(formik) => (
-        <div className="container">
-          <h1 className="">{isEditing ? "Edit Job" : "Add Job"}</h1>
+        <div className="max-w-sm mx-auto bg-white p-6 rounded-lg shadow-lg">
+          <h1 className="text-2xl font-bold mb-4">
+            {isEditing ? "Edit Job" : "Add Job"}
+          </h1>
           <Form>
-            <div className="row">
-              <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
-                <CustomTextInput
-                  label="Position"
-                  name="position"
-                  id="position"
-                  type="text"
-                  placeholder="Enter the position"
-                />
-              </div>
-            </div>
+            <CustomTextInput
+              label="Position"
+              name="position"
+              id="position"
+              type="text"
+              placeholder="e.g., Software Engineer"
+            />
 
-            <div className="row">
-              <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
-                <CustomTextInput
-                  label="Company"
-                  name="company"
-                  id="company"
-                  type="text"
-                  placeholder="Enter the company name"
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
-                <CustomSelect label="Status" name="status" id="status">
-                  <option value="Applied">Applied</option>
-                  <option value="Interview">Interview</option>
-                  <option values="Offer">Offer</option>
-                  <option values="Rejected">Rejected</option>
-                </CustomSelect>
-              </div>
-            </div>
-            <div className="row">
-              <div className="mb-4">
-                <button className="btn btn-primary" type="submit">
-                  {isEditing ? "Update Job" : "Add Job"}
-                </button>
-              </div>
+            <CustomTextInput
+              label="Company"
+              name="company"
+              id="company"
+              type="text"
+              placeholder="e.g., Amazon"
+            />
+
+            <CustomSelect label="Status" name="status" id="status">
+              <option value="Applied">Applied</option>
+              <option value="Interview">Interview</option>
+              <option values="Offer">Offer</option>
+              <option values="Rejected">Rejected</option>
+            </CustomSelect>
+
+            <div className="mt-4">
+              <button
+                className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-indigo-500 focus:ring-opacity-50"
+                type="submit"
+              >
+                {isEditing ? "Update Job" : "Add Job"}
+              </button>
             </div>
           </Form>
         </div>

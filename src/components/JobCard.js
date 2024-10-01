@@ -1,39 +1,8 @@
-// import React from "react";
-/* <div className="w-80 sm:w-88 md:w-72 lg:w-80">
-  <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
-    <div className="p-6">
-      <h5 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
-        {job.position}
-      </h5>
-      <p className="text-gray-600 dark:text-gray-300">{job.company}</p>
-      <p className="text-gray-500 dark:text-gray-400">
-        <small>{job.status}</small>
-      </p>
-      <div className="flex justify-between mt-4">
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={handleEdit}
-        >
-          Edit
-        </button>
-        <button
-          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-          onClick={handleDelete}
-        >
-          Delete
-        </button>
-      </div>
-    </div>
-  </div>
-</div> */
-
-// export default JobCard;
-
-
 import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteJob } from "../redux/reducers/jobReducer";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 /**
  * JobCard component displays job details and provides edit and delete options
@@ -60,8 +29,8 @@ function JobCard({job}) {
           <p className="text-gray-600 dark:text-gray-300">{job.company}</p>
           <p className="text-gray-500 dark:text-gray-400"><small>{job.status}</small></p>
           <div className="flex justify-between mt-4">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleEdit}>Edit</button>
-            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={handleDelete}>Delete</button>
+             <Button onClick={handleEdit}>Edit</Button>
+             <Button className="bg-red-500 hover:bg-red-700">Delete</Button>
           </div>
         </div>
       </div>

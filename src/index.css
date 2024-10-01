@@ -2,28 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Define CSS variable for the light theme */
-:root {
-  --background-color: #fff;
-  --text-color: #000;
-  --card-background-color: #f8f9fa;
-}
-
-/* Define CSS variable for the dardk theme */
-[data-theme="dark"] {
-  --background-color: #222;
-  --text-color: #fff;
-  --card-background-color: #444;
-  --card-text-color: #fff;
-}
-
-/* Apply the CSS variables */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.card {
-  background-color: var(--card-background-color);
-  color: var(--card-text-color);
-}

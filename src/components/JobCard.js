@@ -30,7 +30,7 @@ function JobCard({job}) {
           <p className="text-gray-500 dark:text-gray-400"><small>{job.status}</small></p>
           <div className="flex justify-between mt-4">
              <Button onClick={handleEdit}>Edit</Button>
-             <Button className="bg-red-500 hover:bg-red-700">Delete</Button>
+             <Button className="bg-red-500 hover:bg-red-700" onClick={handleDelete}>Delete</Button>
           </div>
         </div>
       </div>

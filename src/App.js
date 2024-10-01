@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
 import JobForm from "./components/JobForm";
-import { useTheme } from "./contexts/ThemeContext";
 
 /**
  * App component to set up routing for the application
@@ -11,9 +10,8 @@ import { useTheme } from "./contexts/ThemeContext";
  * @returns {JSX.Element} The App component.
  */
 function App() {
-  const {theme} = useTheme();
   return (
-    <div data-theme={theme}>
+    <div className="bg-white text-black dark:bg-gray-900 dark: text-white min-h-screen transition-colors duration-300">
          <Router>
       <Navbar />
       <div>

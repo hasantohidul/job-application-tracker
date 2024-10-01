@@ -17,7 +17,7 @@ const CustomTextInput = ({ label, ...props }) => {
   return (
     <div className="mb-4">
       <label
-        className="block text-lg font-medium text-gray-700 mb-1"
+        className="block text-lg font-medium text-gray-700 dark:text-gray-100 mb-1"
         htmlFor={props.id || props.name}
       >
         {label}
@@ -48,7 +48,7 @@ const CustomSelect = ({ label, ...props }) => {
   return (
     <div className="mb-4">
       <label
-        className="block text-lg font-medium text-gray-700 mb-1"
+        className="block text-lg font-medium text-gray-700 dark:text-gray-100 mb-1"
         htmlFor={props.id || props.name}
       >
         {label}
@@ -112,8 +112,8 @@ function JobForm({ isEditing }) {
       enableReinitialize={true}
     >
       {(formik) => (
-        <div className="max-w-sm mx-auto bg-white p-6 rounded-lg shadow-lg">
-          <h1 className="text-2xl font-bold mb-4">
+        <div className="max-w-sm mx-auto bg-white p-6 rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800">
+          <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
             {isEditing ? "Edit Job" : "Add Job"}
           </h1>
           <Form>

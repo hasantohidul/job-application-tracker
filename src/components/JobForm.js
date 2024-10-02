@@ -54,7 +54,7 @@ const CustomSelect = ({ label, ...props }) => {
         {label}
       </label>
       <select
-        className={`w-full px-3 py-2 border ${hasError ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-indigo-500`}
+        className={`w-full text-black px-3 py-2 border ${hasError ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:ring-indigo-500`}
         {...field}
         {...props}
       >

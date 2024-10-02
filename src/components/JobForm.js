@@ -23,7 +23,7 @@ const CustomTextInput = ({ label, ...props }) => {
         {label}
       </label>
       <input
-        className={`w-full px-3 py-2 border ${
+        className={`w-full text-black px-3 py-2 border ${
           hasError ? "border-red-500" : "border-gray-300"
         } rounded-md focus:outline-none focus:ring-indigo-500`}
         {...field}

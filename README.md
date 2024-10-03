@@ -2,7 +2,7 @@
 # Job Application Tracker
 
 ## Overview
-The Job Application Tracker is a front end web application that helps users manage their job applications efficiently. It is built using modern frontend technologies like React, Redux, Formik, and Yup, with a responsive design provided by Bootstrap. The project also includes unit tests to ensure functionality and reliability. Future plans include integrating a backend to extend its capabilities.
+The Job Application Tracker is a front end web application that helps users manage their job applications.
 ## Live Demo
 Check out the live demo of the application [here](https://hasantohidul-job-application-tracker.netlify.app/).
 ## Features
@@ -10,7 +10,7 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
 - Add, edit and delete job applications
 - Form validation using Formik and Yup
 - State management with Redux
-- Responsive design with Bootstrap
+- Responsive design with Tailwind CSS
 - Comprehensive unit tests with Jest and React Testing Library
 - Data Persistence using localStorage
 - Light/Dark Theme Switcher for enhanced user experience
@@ -22,7 +22,7 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
 - Redux
 - Formik
 - Yup
-- Bootstrap
+- Tailwind CSS
 - Jest
 - React Testing Library
 ## Installation
@@ -56,33 +56,42 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
     ```
 ## Project Structure
 ```sh
-job-application-tracker/
-job-application-tracker/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.js
-│   │   ├── JobCard.js
-│   │   ├── JobCard.css
-│   │   ├── JobCard.test.js
-│   │   ├── JobForm.js
-│   │   ├── JobForm.test.js
-│   │   ├── Dashboard.js
-│   │   ├── Dashboard.css
-│   │   ├── ThemeSwitcher.js
-│   ├── contexts/
-│   │   ├── ThemeContext.js
-│   ├── redux/
-│   │   ├── store.js
-│   │   ├── reducers/
-│   │   │   ├── jobReducer.js
-│   ├── utils/
-│   │   ├── localStorage.js
-│   ├── App.js
-│   ├── index.js
-│   ├── index.css
-├── .gitignore
-├── package.json
-├── README.md
+job-application-tracker
+├─ .gitignore
+├─ LICENSE
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ public
+│  ├─ icons8-app-50.png
+│  ├─ index.html
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ README.md
+├─ src
+│  ├─ App.js
+│  ├─ components
+│  │  ├─ Button.js
+│  │  ├─ Dashboard.js
+│  │  ├─ JobCard.js
+│  │  ├─ JobCard.test.js
+│  │  ├─ JobForm.js
+│  │  ├─ JobForm.test.js
+│  │  ├─ Navbar.js
+│  │  └─ ThemeSwitcher.js
+│  ├─ contexts
+│  │  └─ ThemeContext.js
+│  ├─ index.css
+│  ├─ index.js
+│  ├─ redux
+│  │  ├─ reducers
+│  │  │  └─ jobReducer.js
+│  │  └─ store.js
+│  ├─ reportWebVitals.js
+│  ├─ setupTests.js
+│  └─ utils
+│     └─ localStorage.js
+└─ tailwind.config.js
 ```
 ## Future Plans
 The current implementation is focused on the front-end. Future plans include integrating a backend to extend the application's capabilities.

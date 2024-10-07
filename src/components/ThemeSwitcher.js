@@ -1,5 +1,7 @@
 import React from "react";
+import { SunIcon, MoonIcon } from "@heroicons/react/16/solid";
 import { useTheme } from "../contexts/ThemeContext";
+
 
 /**
  * ThemeSwitcher component that provides a button to toggle the theme
@@ -10,10 +12,14 @@ function ThemeSwitcher() {
 
   return (
     <button
-      className="bg-gray-500 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-900 text-white font-bold py-2 px-4 rounded"
+      className="hover:bg-gray-700 dark:hover:bg-gray-500 text-white font-bold py-2 px-2 rounded-full"
       onClick={toggleTheme}
     >
-      Switch to {theme === "light" ? "Dark" : "Light"}
+      {theme === "light" ? (
+        <>
+        <MoonIcon className="h-5 w-5"></MoonIcon>
+        </>
+      ) : <SunIcon className="h-5 w-5"></SunIcon>}
     </button>
   );
 }

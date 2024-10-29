@@ -15,7 +15,7 @@ function Navbar() {
           </div>
           <div className="flex">
             <div className="hidden md:block">
-              <div className="ml-10 items-baseline space-x-4">
+              <div className="ml-10 space-x-4 flex items-center">
                 <Link
                   className="text-gray-300 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-700 hover:text-white dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   to="/dashboard"

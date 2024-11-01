@@ -1,11 +1,11 @@
 
-# Job Application Tracker
+# 🌐 Job Application Tracker
 
-## Overview
+## 🌍 Overview
 The Job Application Tracker is a front end web application that helps users manage their job applications efficiently. It is built using modern front-end technologies like React, Redux, Formik, and Yup, with a responsive design provided by Tailwind CSS. The project also includes unit tests to ensure functionality and reliability. Future plans include integrating a backend to extend its capabilities.
-## Live Demo
+## ✨ Live Demo
 Check out the live demo of the application [here](https://hasantohidul-job-application-tracker.netlify.app/).
-## Features
+## 🛠️ Features
 
 - Add, edit and delete job applications
 - Form validation using Formik and Yup
@@ -16,7 +16,7 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
 - Light/Dark Theme Switcher for enhanced user experience
 
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - React
 - Redux
@@ -25,7 +25,7 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
 - Tailwind CSS
 - Jest
 - React Testing Library
-## Installation
+## 🚀 Installation
 
 1.  **Clone the repository**
     ```sh
@@ -39,7 +39,7 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
     ```sh
     npm install
     ```
-## Usage
+## 📖 Usage
 
 1. Start the development server
     ```sh
@@ -48,13 +48,13 @@ Check out the live demo of the application [here](https://hasantohidul-job-appli
 2. Open the application
 - Open the http://localhost:3000 in your browser to view the application
 
-## Running Tests
+## 🧪 Running Tests
 
 1. Run unit Tests
     ```sh
     npm test
     ```
-## Project Structure
+## 📂 Project Structure
 ```sh
 job-application-tracker
 ├─ .gitignore
@@ -95,7 +95,7 @@ job-application-tracker
 ```
 ## Future Plans
 The current implementation is focused on the front-end. Future plans include integrating a backend to extend the application's capabilities.
-## Contributing
+## 🤝 Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any features, enhancements, or bug fixes.
 ## License
 This project is licensed under the MIT License

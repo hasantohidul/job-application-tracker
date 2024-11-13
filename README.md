@@ -93,17 +93,17 @@ job-application-tracker
 │     └─ localStorage.js
 └─ tailwind.config.js
 ```
-## Future Plans
+## 🔮 Future Plans
 The current implementation is focused on the front-end. Future plans include integrating a backend to extend the application's capabilities.
 ## 🤝 Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any features, enhancements, or bug fixes.
-## License
+## 📜 License
 This project is licensed under the MIT License
-## Contact
+## ✉️ Contact
 
 For any questions or suggestions, please contact:
 
-- **Name**: Mohammad Tohidul Hasan
-- **Email**: [mhasantohidul@gmail.com](mailto:mhasantohidul@gmail.com)
+- **Name**: Mohammad Tohidul Hasan (Tohid)
+- **Email**: [tohid@tohid.dev](mailto:tohid@tohid.dev)
 - **GitHub**: [hasantohidul](https://github.com/hasantohidul)
 - **LinkedIn**: [hasantohidul](https://www.linkedin.com/in/hasantohidul/)
